@@ -1,12 +1,22 @@
 var howTo = angular.module('howTo', ['ui.router', 'ngAnimate', 'ngSanitize']);
 
 howTo.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('home', {
-      url: '/home',
-      templateUrl: 'views/home.html'
+    .state('about', {
+      url: '/',
+      templateUrl: 'views/about.html'
+    })
+
+    .state('api', {
+      url: '/api',
+      templateUrl: 'views/api.html'
+    })
+
+    .state('library', {
+      url: '/library',
+      templateUrl: 'views/library.html'
     })
 });
 
