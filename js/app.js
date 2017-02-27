@@ -6,6 +6,11 @@ howTo.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: 'views/home.html'
+      templateUrl: 'views/home.html',
+      controller: 'HomeCtrl'
     })
-})
+});
+
+howTo.run(function($rootScope) {
+  $rootScope.$on('$stateChangeError', console.log.bind(console));
+});
