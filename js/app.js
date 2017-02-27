@@ -11,7 +11,8 @@ howTo.config(function($stateProvider, $urlRouterProvider) {
 
     .state('api', {
       url: '/api',
-      templateUrl: 'views/api.html'
+      templateUrl: 'views/api.html',
+      controller: 'ApiCtrl'
     })
 
     .state('library', {
