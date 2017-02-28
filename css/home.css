@@ -8,6 +8,10 @@
   margin-top: 50px;
 }
 
+.card-custom {
+  width: 100%;
+}
+
 .offset-sm-half {
   margin-left: 4.333333333%;
 }
