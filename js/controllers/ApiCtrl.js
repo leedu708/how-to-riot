@@ -21,4 +21,22 @@ howTo.controller('ApiCtrl',
       req.send(null);
     }
 
+    $scope.test2 = function() {
+      var req = apiService.getPlayerID('leedu');
+      req.onload = function(e) {
+        if (req.readyState === 4) {
+          if (req.status === 200) {
+            console.log(req.responseText);
+          } else {
+            console.error(req.statusText);
+          }
+        }
+      }
+
+      req.onerror = function(e) {
+        console.error(req.statusText);
+      };
+      req.send(null);
+    }
+
   }])
